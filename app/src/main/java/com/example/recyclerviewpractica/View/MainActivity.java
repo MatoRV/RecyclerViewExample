@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         // Inicializa el RecyclerView
         mRecyclerView = findViewById(R.id.recycler_view);
 
+        // Se insertan los datos
         itemList = new ArrayList<>();
         itemList.add(new Item(1,"ADAPTADOR DVI MACHO A HDMI HEMBRA","OEM","Accesorios","3.91"));
         itemList.add(new Item(2,"SOPLADOR DE POLVO","CRC","Accesorios","4.81"));
@@ -40,7 +41,9 @@ public class MainActivity extends AppCompatActivity {
         // Configura el adaptador
         itemAdapter = new ItemAdapter(itemList);
 
+        // Se asigna el LayoutManager al RecyclerView
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        // Se le asigna el adaptador al RecyclerView
         mRecyclerView.setAdapter(itemAdapter);
 
     }

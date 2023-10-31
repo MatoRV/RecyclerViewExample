@@ -18,8 +18,9 @@ import java.util.List;
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
     // Instancia de la lista de Items
-    private List<Item> itemList = new ArrayList<>();
+    private List<Item> itemList;
 
+    // Constructor de ItemAdapter
     public ItemAdapter(List<Item> itemList) {
         this.itemList = itemList;
     }
